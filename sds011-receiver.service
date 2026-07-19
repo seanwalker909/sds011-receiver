@@ -1,0 +1,14 @@
+[Unit]
+Description=SDS011 Sensor Receiver Service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/sds011-receiver
+ExecStart=/home/pi/sds011-receiver/venv/bin/python /home/pi/sds011-receiver/app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
