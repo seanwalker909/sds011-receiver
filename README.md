@@ -35,8 +35,10 @@ This server runs on the **Display Pi** to receive air quality data from a sensor
 
 ## Running as a Service
 
-1. Move the service file to systemd directory:
-   `sudo cp sds011.service /etc/systemd/system/`
-2. Enable and start:
+1. Move the service file to the systemd directory:
+   `sudo cp sds011-receiver.service /etc/systemd/system/`
+2. Reload the systemd daemon:
+   `sudo systemctl daemon-reload`
+3. Enable and start the service:
    `sudo systemctl enable sds011-receiver.service`
    `sudo systemctl start sds011-receiver.service`
