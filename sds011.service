@@ -6,7 +6,8 @@ After=network.target
 Type=simple
 User=pi
 WorkingDirectory=/home/pi/sds011-receiver
-ExecStart=/usr/bin/python3 /home/pi/sds011-receiver/app.py
+# Use the python executable inside the virtual environment
+ExecStart=/home/pi/sds011-receiver/venv/bin/python /home/pi/sds011-receiver/app.py
 Restart=always
 RestartSec=5
 
