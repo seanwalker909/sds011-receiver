@@ -8,8 +8,12 @@ This server runs on the **Display Pi** to receive air quality data from a sensor
    `git clone https://github.com/seanwalker909/sds011-receiver.git`
 2. Navigate to folder:
    `cd sds011-receiver`
-3. Install dependencies:
-   `pip install -r requirements.txt`
+3. Create and use a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
 ## Running as a Service
 
